@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSI - Trust of Safety | Product Gallery</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- Load Require CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Load Tempalte CSS -->
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a3a6c;
+            --secondary: #e63946;
+            --accent: #2a9d8f;
+            --light: #f1faee;
+            --dark: #1d3557;
+            --gray: #8d99ae;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .logo_img {
+            width: 4.5rem;
+            height: 4.5rem;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        #main_nav {
+            transition: all 0.3s ease;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        #main_nav.scrolled {
+            transform: translateY(0);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            font-size: 28px;
+            color: var(--primary);
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .logo-text span:first-child {
+            color: var(--dark);
+        }
+
+        .logo-text span:last-child {
+            color: var(--secondary);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary);
+        }
+
+
+
+
+
+        /* Hero Banner */
+        .hero {
+            background: linear-gradient(rgba(26, 58, 108, 0.85), rgba(26, 58, 108, 0.9)), url('https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--secondary);
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: 2px solid var(--secondary);
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: white;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border-color: white;
+            margin-left: 15px;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary);
+        }
+
+        /* Categories Section */
+        .section-title {
+            text-align: center;
+            margin: 60px 0 40px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            display: inline-block;
+            background-color: white;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--accent);
+            z-index: 0;
+        }
+
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .category-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 180px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .category-icon {
+            background-color: var(--primary);
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: white;
+        }
+
+        .category-content {
+            padding: 20px 15px;
+        }
+
+        .category-content h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Products Gallery */
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            background-color: white;
+            border: 1px solid var(--gray);
+            border-radius: 30px;
+            color: var(--dark);
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background-color: var(--primary);
+            color: var(--secondary);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-img {
+            height: 200px;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 50px;
+        }
+
+        .product-content {
+            padding: 20px;
+        }
+
+        .product-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .product-code {
+            color: var(--gray);
+            font-size: 14px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .product-specs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .spec-badge {
+            background-color: #e9f5f4;
+            color: var(--accent);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .product-standards {
+            font-size: 14px;
+            color: var(--dark);
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        /* Certifications */
+        .certifications {
+            background-color: var(--light);
+            padding: 60px 0;
+            margin: 60px 0;
+        }
+
+        .cert-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .cert-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            width: 250px;
+        }
+
+        .cert-icon {
+            font-size: 50px;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .cert-card h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            font-size: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary);
+        }
+
+        .footer-col p {
+            opacity: 0.8;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin-top: 15px;
+            }
+
+            nav ul li {
+                margin: 0 10px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 5px 10px;
+            }
+
+            .hero {
+                height: 400px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .btn {
+                display: block;
+                margin: 10px auto;
+                width: 80%;
+            }
+
+            .btn-outline {
+                margin-left: 0;
+            }
+        }
+
+        .navbar-light .navbar-nav .nav-link.active,
+        .navbar-light .navbar-nav .show>.nav-link {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background-color: var(--primary);
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <img src="assets/img/working_img/logo.png" class="img-fluid logo_img" alt="">
+            <div class="logo_link ms-3 mt-1">
+                <a class="navbar-brand h1" href="index.html">
+                    <span class="text-dark h4">RSI</span> <span class="text-primary h4">Trust of Safety</span>
+                </a>
+            </div>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
+                id="navbar-toggler-success">
+                <div class="flex-fill mx-xl-5 mb-2">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="work.html">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+                    <a class="nav-link" href="#"><i class='bx bx-bell bx-sm bx-tada-hover text-primary'></i></a>
+                    <a class="nav-link" href="#"><i class='bx bx-cog bx-sm text-primary'></i></a>
+                    <a class="nav-link" href="#"><i class='bx bx-user-circle bx-sm text-primary'></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="hero mt-5">
+        <div class="hero-content">
+            <h1>Premium Safety Equipment Gallery</h1>
+            <p>Explore our ISO 9001:2015 certified fall protection products designed for maximum safety and durability
+            </p>
+            <a href="#" class="btn">Request Catalog</a>
+            <a href="#" class="btn btn-outline">Contact Sales</a>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="container">
+        <div class="section-title">
+            <h2>Product Categories</h2>
+        </div>
+        <div class="categories">
+            <div class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-user-alt"></i>
+                </div>
+                <div class="category-content">
+                    <h3>Full Body Harness</h3>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-hands"></i>
+                </div>
+                <div class="category-content">
+                    <h3>Lanyards</h3>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-anchor"></i>
+                </div>
+                <div class="category-content">
+                    <h3>Anchorage</h3>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-mountain"></i>
+                </div>
+                <div class="category-content">
+                    <h3>Rope Access</h3>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-toolbox"></i>
+                </div>
+                <div class="category-content">
+                    <h3>Metal Components</h3>
+                </div>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-vest"></i>
+                </div>
+                <div class="category-content">
+                    <h3>Work Positioning</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Gallery -->
+    <section class="container">
+        <div class="section-title">
+            <h2>Featured Products</h2>
+        </div>
+
+        <div class="gallery-filters">
+            <button class="filter-btn active">All Products</button>
+            <button class="filter-btn">Harnesses</button>
+            <button class="filter-btn">Lanyards</button>
+            <button class="filter-btn">Anchorage</button>
+            <button class="filter-btn">Rescue Equipment</button>
+            <button class="filter-btn">Metal Components</button>
+        </div>
+
+        <div class="gallery-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <i class="fas fa-vest"></i>
+                </div>
+                <div class="product-content">
+                    <h3>RSI Nero Series Harness</h3>
+                    <span class="product-code">RS-16</span>
+                    <p>Premium full body harness with adjustable dorsal D-ring and maximum comfort features.</p>
+                    <div class="product-specs">
+                        <span class="spec-badge">44mm Polyester</span>
+                        <span class="spec-badge">22 kN Strength</span>
+                        <span class="spec-badge">Adjustable</span>
+                    </div>
+                    <div class="product-standards">
+                        <strong>Standards:</strong> EN 361:2002
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <i class="fas fa-link"></i>
+                </div>
+                <div class="product-content">
+                    <h3>Twin Legged Energy Absorbing Lanyard</h3>
+                    <span class="product-code">RS-865</span>
+                    <p>High-strength lanyard with energy absorption technology for fall protection.</p>
+                    <div class="product-specs">
+                        <span class="spec-badge">44mm Webbing</span>
+                        <span class="spec-badge">1.8m Length</span>
+                        <span class="spec-badge">Shock Absorbing</span>
+                    </div>
+                    <div class="product-standards">
+                        <strong>Standards:</strong> EN 355:2002
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <i class="fas fa-hiking"></i>
+                </div>
+                <div class="product-content">
+                    <h3>RSI Elite Series Harness</h3>
+                    <span class="product-code">RS-116</span>
+                    <p>Advanced harness with lateral D-rings for work positioning and high-resistance back plate.</p>
+                    <div class="product-specs">
+                        <span class="spec-badge">Comfort Padding</span>
+                        <span class="spec-badge">Adjustable</span>
+                        <span class="spec-badge">22 kN Strength</span>
+                    </div>
+                    <div class="product-standards">
+                        <strong>Standards:</strong> EN 361:2002, EN 358:1999
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <i class="fas fa-user-injured"></i>
+                </div>
+                <div class="product-content">
+                    <h3>Suspension Trauma Strap</h3>
+                    <p>Emergency strap to combat suspension trauma effects while waiting for rescue.</p>
+                    <div class="product-specs">
+                        <span class="spec-badge">Lightweight</span>
+                        <span class="spec-badge">Easy to Deploy</span>
+                        <span class="spec-badge">Comfort Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <i class="fas fa-tripadvisor"></i>
+                </div>
+                <div class="product-content">
+                    <h3>Confined Space Tripod</h3>
+                    <span class="product-code">RSH-TP800</span>
+                    <p>Aluminum alloy tripod for confined space entry and retrieval applications.</p>
+                    <div class="product-specs">
+                        <span class="spec-badge">500kg Capacity</span>
+                        <span class="spec-badge">15 kN Strength</span>
+                        <span class="spec-badge">Easy Setup</span>
+                    </div>
+                    <div class="product-standards">
+                        <strong>Standards:</strong> EN 795:2012 Type B
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <i class="fas fa-ring"></i>
+                </div>
+                <div class="product-content">
+                    <h3>Carabiners & Connectors</h3>
+                    <p>High-strength steel connectors including carabiners, snap hooks, and scaffold hooks.</p>
+                    <div class="product-specs">
+                        <span class="spec-badge">Steel Construction</span>
+                        <span class="spec-badge">6000 lbs Load</span>
+                        <span class="spec-badge">Safety Lock</span>
+                    </div>
+                    <div class="product-standards">
+                        <strong>Standards:</strong> EN 362:2004
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="certifications">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Certifications</h2>
+            </div>
+            <div class="cert-container">
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>ISO 9001:2015</h3>
+                    <p>Quality Management System Certified</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-globe-europe"></i>
+                    </div>
+                    <h3>EN Standards</h3>
+                    <p>European Safety Standards Compliance</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>UK Cert Limited</h3>
+                    <p>Certified under EN standards (4085)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary pt-4">
+        <div class="container">
+            <div class="row py-4">
+                <!-- Company Info -->
+                <div class="col-lg-3 col-12 align-left">
+                    <a class="navbar-brand" href="index.html">
+                        <i class='bx bx-buildings bx-sm text-light'></i>
+                        <span class="text-light h5">RSI</span> <span class="text-light h5 semi-bold-600">SAFETY</span>
+                    </a>
+                    <p class="text-light my-lg-4 my-2">
+                        ISO 9001:2015 certified manufacturer of fall protection systems and PPE. Pioneers in height
+                        safety solutions, trusted globally for quality and innovation.
+                    </p>
+                    <ul class="list-inline footer-icons light-300">
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="http://facebook.com/">
+                                <i class='bx bxl-facebook-square bx-md'></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="https://www.linkedin.com/">
+                                <i class='bx bxl-linkedin-square bx-md'></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="https://www.whatsapp.com/">
+                                <i class='bx bxl-whatsapp-square bx-md'></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="mailto:rahmatsafetyindustries@gmail.com">
+                                <i class='bx bx-mail-send bx-md'></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+                    <h3 class="h4 pb-lg-3 text-light light-300">Our Company</h3>
+                    <ul class="list-unstyled text-light light-300">
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light"
+                                href="index.html">Home</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light"
+                                href="about.html">About Us</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light"
+                                href="products.html">Products</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light"
+                                href="certifications.html">Certifications</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light"
+                                href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Products -->
+                <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+                    <h3 class="h4 pb-lg-3 text-light light-300">Our Products</h3>
+                    <ul class="list-unstyled text-light light-300">
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light"
+                                href="#">Full Body Harnesses</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light"
+                                href="#">Lanyards & Connectors</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light"
+                                href="#">Fall Arrest Blocks</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light"
+                                href="#">Rescue & Rope Access</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light"
+                                href="#">Work Positioning Systems</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+                    <h3 class="h4 pb-lg-3 text-light light-300">Contact Us</h3>
+                    <ul class="list-unstyled text-light light-300">
+                        <li class="pb-2">
+                            <i class='bx-fw bx bx-map bx-xs'></i>
+                            <span class="text-light">S-5 Panki Industrial Area, Site-3, LML Chauraha, Kanpur (U.P.)
+                                208022</span>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bx-phone bx-xs'></i><a class="text-decoration-none text-light"
+                                href="tel:+917838552143">+91 7838552143</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bx-phone bx-xs'></i><a class="text-decoration-none text-light"
+                                href="tel:+917860739713">+91 7860739713</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bx-mail-send bx-xs'></i><a class="text-decoration-none text-light"
+                                href="mailto:rahmatsafetyindustries@gmail.com">rahmatsafetyindustries@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Load jQuery require for isotope -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Isotope -->
+    <script src="assets/js/isotope.pkgd.js"></script>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('main_nav');
+            if (window.scrollY > 100) { // Adjust this value based on when you want the navbar to appear
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Initialize navbar to appear if already scrolled on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbar = document.getElementById('main_nav');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            }
+        });
+
+        // Simple scroll animation for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add active class to current page in navigation
+        const currentPage = window.location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('nav ul li a');
+
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+    <script>
+        // Simple filter functionality for demonstration
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                // In a real implementation, this would filter the products
+                // For this demo, we'll just show an alert
+                alert(`Filtering by: ${this.textContent}`);
+            });
+        });
+
+        // Animation for product cards on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.style.opacity = 0;
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(card);
+        });
+    </script>
+    <script>
+        $(window).load(function () {
+            // init Isotope
+            var $projects = $('.projects').isotope({
+                itemSelector: '.project',
+                layoutMode: 'fitRows'
+            });
+            $(".filter-btn").click(function () {
+                var data_filter = $(this).attr("data-filter");
+                $projects.isotope({
+                    filter: data_filter
+                });
+                $(".filter-btn").removeClass("active");
+                $(".filter-btn").removeClass("shadow");
+                $(this).addClass("active");
+                $(this).addClass("shadow");
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>

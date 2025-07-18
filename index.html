@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Homepage - Rahmat Safety Industries</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- Load Require CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Load Tempalte CSS -->
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        #main_nav {
+            transition: all 0.3s ease;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        #main_nav.scrolled {
+            transform: translateY(0);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-wrapper {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin: 40px 0;
+            transition: var(--transition);
+        }
+
+        .active {
+            color: white !important;
+        }
+
+        .active_services {
+            color: black !important;
+        }
+
+        .service-wrapper:hover {
+            box-shadow: var(--shadow-hover);
+        }
+
+        .section-header {
+            text-align: center;
+            padding: 50px 20px 30px;
+            background: linear-gradient(120deg, var(--primary), var(--secondary));
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+            transform: rotate(30deg);
+        }
+
+        .section-header h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            position: relative;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            color: blue;
+
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .service-tag {
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            padding: 25px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .filter-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 0 20px;
+        }
+
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .filter-btn i {
+            font-size: 1.1rem;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-content {
+            padding: 50px 20px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card-img {
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .card-img img {
+            transform: scale(1.05);
+        }
+
+        .card-category {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            z-index: 2;
+        }
+
+        .card-body {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-body h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .card-body p {
+            color: var(--gray);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .feature {
+            background: var(--light-gray);
+            color: var(--dark);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .price {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--primary);
+        }
+
+
+
+
+
+        .btn i {
+            font-size: 0.9rem;
+        }
+
+        /* Animation for filtering */
+        .service-card {
+            opacity: 1;
+            transform: scale(1);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .service-card.hide {
+            opacity: 0;
+            transform: scale(0.9);
+            pointer-events: none;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+
+            .filter-nav {
+                gap: 10px;
+            }
+
+            .filter-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+                border: 2px solid;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-header {
+                padding: 30px 15px;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+
+            }
+
+            .filter-nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .filter-btn {
+                width: 80%;
+                justify-content: center;
+                color: black;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .watermark {
+            text-align: center;
+            padding: 30px;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .logo_img {
+            width: 4.5rem;
+            height: 4.5rem;
+        }
+
+        .navbar-brand span {
+            display: inline-block;
+        }
+
+        .safety-solutions {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            position: relative;
+        }
+
+        .safety-bg-element {
+            position: absolute;
+            opacity: 0.03;
+            font-size: 15rem;
+            z-index: 0;
+        }
+
+        .bg-shield {
+            top: -50px;
+            left: -50px;
+            color: #0d6efd;
+        }
+
+        .bg-harness {
+            bottom: -50px;
+            right: -50px;
+            color: #fd7e14;
+        }
+
+        .particle-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(#0d6efd33 1px, transparent 1px);
+            background-size: 15px 15px;
+        }
+
+        .solution-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-img-container {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-img-container img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .solution-card:hover .card-img-container img {
+            transform: scale(1.05);
+        }
+
+        .hover-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .solution-card:hover .hover-overlay {
+            opacity: 1;
+        }
+
+        .cert-badge {
+            background: linear-gradient(45deg, #0d6efd, #0b5ed7);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .feature-badge {
+            background-color: #f0f7ff;
+            color: #0d6efd;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            border: 1px solid #d0e3ff;
+        }
+
+        .solution-filters .btn {
+            margin: 5px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .solution-filters .btn.active {
+            background: #0d6efd;
+            color: white;
+        }
+
+        .product-actions .btn {
+            margin-left: 5px;
+            color: #6c757d;
+        }
+
+        .product-actions .btn:hover {
+            color: #0d6efd;
+        }
+
+        .rating {
+            color: #ffc107;
+        }
+
+        .z-index-1 {
+            position: relative;
+            z-index: 1;
+        }
+
+        .primary-gradient {
+            background: linear-gradient(45deg, #0d6efd, #0b5ed7);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <img src="assets/img/working_img/logo.png" class="img-fluid logo_img" alt="">
+            <div class="logo_link ms-3 mt-1">
+                <a class="navbar-brand h1" href="index.html">
+                    <span class="text-dark h4">RSI</span> <span class="text-primary h4">Trust of Safety</span>
+                </a>
+            </div>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
+                id="navbar-toggler-success">
+                <div class="flex-fill mx-xl-5 mb-2">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="work.html">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+                    <a class="nav-link" href="#"><i class='bx bx-bell bx-sm bx-tada-hover text-primary'></i></a>
+                    <a class="nav-link" href="#"><i class='bx bx-cog bx-sm text-primary'></i></a>
+                    <a class="nav-link" href="#"><i class='bx bx-user-circle bx-sm text-primary'></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+
+    <!-- Start Banner Hero -->
+    <div class="banner-wrapper bg-light">
+        <div id="index_banner" class="banner-vertical-center-index container-fluid pt-5 mt-3">
+
+            <!-- Start slider -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner ">
+                    <div class="carousel-item active">
+
+                        <div class="py-5 row d-flex align-items-center">
+                            <div
+                                class="banner-content text-white col-lg-8 col-8 offset-2 m-lg-auto text-left py-5 pb-5">
+                                <h1
+                                    class="banner-heading h1 fw-bold display-3 mb-0 pb-5 mx-0 px-0 light-300 typo-space-line">
+                                    Trust of <strong>Safety </strong> for
+                                    <br>your Life
+                                </h1>
+                                <p class="banner-body text-white py-3 mx-0 px-0">
+                                    ISO 9001:2015 certified company dedicated to the field of Safety. RSI stands as a
+                                    trusted and renowned brand in the industry, recognized as one of the fastest-growing
+                                    companies globally in Fall Protection Products and Systems..
+                                </p>
+                                <a class="banner-button btn rounded-pill btn-primary btn-lg px-4" href="#"
+                                    role="button">Get Started</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="carousel-item">
+                        <div class="py-5 row d-flex align-items-center">
+                            <div class="banner-content col-lg-8 col-8 offset-2 m-lg-auto text-left py-5 pb-5">
+                                <h1 class="banner-heading h1 text-white display-3 mb-0 pb-3 mx-0 px-0 light-300">
+                                    Trust of Safety
+                                </h1>
+                                <p class="banner-body text-white py-3">
+                                    ISO 9001:2015 certified company dedicated to height safety and fall protection. <br>
+
+                                    We manufacture premium safety equipment that meets international standards including
+                                    EN, <br> IS 3521:1999, and ANSI specifications. Your safety is our priority.
+                                </p>
+                                <div class="d-flex gap-3">
+                                    <a class="banner-button btn rounded-pill btn-primary btn-lg px-4" href="#products"
+                                        role="button">
+                                        Explore Products
+                                    </a>
+                                    <a class="banner-button btn rounded-pill fw-bolder btn-primary btn-lg px-4"
+                                        href="contact.html" role="button">
+                                        Contact Us
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <a class="carousel-control-prev text-decoration-none" href="#carouselExampleIndicators" role="button"
+                    data-bs-slide="prev">
+                    <i class='bx bx-chevron-left'></i>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next text-decoration-none" href="#carouselExampleIndicators" role="button"
+                    data-bs-slide="next">
+                    <i class='bx bx-chevron-right'></i>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+            <!-- End slider -->
+
+        </div>
+    </div>
+    <!-- End Banner Hero -->
+
+
+
+    <!-- Start Service -->
+    <section class="service-wrapper">
+        <div class="section-header">
+            <h2>Our Safety Solutions</h2>
+            <p class="text-dark">Trusted fall protection and height safety equipment compliant with global standards</p>
+        </div>
+
+        <div class="service-tag">
+            <div class="filter-nav">
+                <button class="filter-btn active_services text-dark" data-filter="all">
+                    <i class="fas fa-th"></i> All Products
+                </button>
+
+            </div>
+        </div>
+
+        <div class="service-content">
+            <div class="services-grid">
+                <!-- Full Body Harness -->
+                <div class="service-card" data-category="harness">
+                    <div class="card-img">
+                        <img src="/assets/img/working_img/fall-protection-2-2.webp" alt="Full Body Harness">
+                        <span class="card-category">EN 361:2002 Certified</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Full Body Harness</h3>
+                        <p>RSI NERO & ELITE Series with adjustable dorsal D-rings, comfort padding, and 44mm polyester
+                            webbing (22kN strength).</p>
+                        <div class="features">
+                            <span class="feature">Fall Arrest</span>
+                            <span class="feature">Work Positioning</span>
+                            <span class="feature">Rescue Ready</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="/pdf/myPdf.pdf" class="btn text-dark border border-dark border-1" target="_blank">
+                                <i class="fas fa-arrow-right"></i> View Models
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Energy Absorbing Lanyards -->
+                <div class="service-card" data-category="lanyards">
+                    <div class="card-img">
+                        <img src="./assets/img/working_img/rsi (8).jpeg" alt="Energy Absorbing Lanyards">
+                        <span class="card-category">EN 355:2002 Certified</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Energy Absorbing Lanyards</h3>
+                        <p>Forked and twin-legged lanyards with polyamide rope/webbing, shock absorbers, and carabiner
+                            attachments.</p>
+                        <div class="features">
+                            <span class="feature">1-2m Lengths</span>
+                            <span class="feature">VG11 Tested</span>
+                            <span class="feature">UV Resistant</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="/pdf/myPdf.pdf" class="btn text-dark border border-dark border-1" target="_blank">
+                                <i class="fas fa-arrow-right"></i> View Models
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Confined Space Tripod -->
+                <div class="service-card" data-category="rescue">
+                    <div class="card-img">
+                        <img src="./assets/img/working_img/rsi (6).jpeg" alt="Confined Space Tripod">
+                        <span class="card-category">EN 795:2012 Certified</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Confined Space Tripod</h3>
+                        <p>Aluminum alloy tripod for rescue/retrieval with 500kg capacity, 1.56m wheelbase, and 15kN
+                            system strength.</p>
+                        <div class="features">
+                            <span class="feature">Lightweight</span>
+                            <span class="feature">Quick Setup</span>
+                            <span class="feature">Winch Compatible</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="/pdf/myPdf.pdf" class="btn text-dark border border-dark border-1" target="_blank">
+                                <i class="fas fa-arrow-right"></i> View Models
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Positioning Belt -->
+                <div class="service-card" data-category="harness">
+                    <div class="card-img">
+                        <img src="./assets/img/working_img/rsi (10).jpeg" alt="Work Positioning Belt">
+                        <span class="card-category">EN 358:1999 Certified</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Work Positioning Belt</h3>
+                        <p>Adjustable waist belts with lateral D-rings, padded comfort, and parachute buckles for
+                            hands-free work at height.</p>
+                        <div class="features">
+                            <span class="feature">Sliding Belt</span>
+                            <span class="feature">Textile Loops</span>
+                            <span class="feature">1.2kg Weight</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="/pdf/myPdf.pdf" class="btn text-dark border border-dark border-1" target="_blank">
+                                <i class="fas fa-arrow-right"></i> View Models
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rope Access Kits -->
+                <div class="service-card" data-category="rescue">
+                    <div class="card-img">
+                        <img src="./assets/img/working_img/rsi (9).jpeg" alt="Rope Access Kit">
+                        <span class="card-category">EN 353/354 Certified</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Rope Access & Rescue Kit</h3>
+                        <p>Complete kits with harnesses, descenders, rope grabs, and pulleys for confined space or
+                            window cleaning.</p>
+                        <div class="features">
+                            <span class="feature">Pre-Packed</span>
+                            <span class="feature">Customizable</span>
+                            <span class="feature">OEM Options</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="/pdf/myPdf.pdf" class="btn text-dark border border-dark border-1" target="_blank">
+                                <i class="fas fa-arrow-right"></i> View Models
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Suspension Trauma Straps -->
+                <div class="service-card" data-category="rescue">
+                    <div class="card-img">
+                        <img src="./assets/img/working_img/rsi (7).jpeg" alt="Suspension Trauma Straps">
+                        <span class="card-category">Rescue Essential</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Suspension Trauma Straps</h3>
+                        <p>Lightweight zipped pouches with webbing straps to relieve pressure during fall suspension
+                            emergencies.</p>
+                        <div class="features">
+                            <span class="feature">Velcro Attachment</span>
+                            <span class="feature">Buckle Loop</span>
+                            <span class="feature">Harness-Compatible</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="/pdf/myPdf.pdf" class="btn text-dark border border-dark border-1" target="_blank">
+                                <i class="fas fa-arrow-right"></i> View Models
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Service -->
+
+    <section class="rsi-view-work">
+        <div class="container py-5">
+            <div class="row d-flex justify-content-center text-center">
+                <div class="col-lg-12 mb-5">
+                    <div class="rsi-icon-container">
+                        <div class="rsi-icon">
+                            <img src="assets/img/working_img/logo.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="rsi-content">
+                        <h2 class="mb-4">RSI Safety Solutions for Global Industries</h2>
+                        <p class="lead mb-4">
+                            As an ISO 9001:2015 certified company, we design and manufacture premium fall protection
+                            systems
+                            that meet international standards and protect workers in the most challenging environments.
+                        </p>
+
+                        <div class="rsi-stats-container">
+                            <div class="rsi-stat">
+                                <div class="rsi-stat-number">50+</div>
+                                <div class="rsi-stat-label">Safety Products</div>
+                            </div>
+                            <div class="rsi-stat">
+                                <div class="rsi-stat-number">20+</div>
+                                <div class="rsi-stat-label">Years Experience</div>
+                            </div>
+                            <div class="rsi-stat">
+                                <div class="rsi-stat-number">30+</div>
+                                <div class="rsi-stat-label">Countries Served</div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <h4 class="mb-3">Certified to Global Standards</h4>
+                            <div>
+                                <span class="rsi-cert-badge">EN 361:2002</span>
+                                <span class="rsi-cert-badge">EN 355:2002</span>
+                                <span class="rsi-cert-badge">EN 358:1999</span>
+                                <span class="rsi-cert-badge">ANSI Standards</span>
+                                <span class="rsi-cert-badge">IS 3521:1999</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <h4 class="mb-3">Trusted By Industries Worldwide</h4>
+                            <div class="rsi-industries">
+                                <span class="rsi-industry">Telecommunication</span>
+                                <span class="rsi-industry">Oil & Gas</span>
+                                <span class="rsi-industry">Engineering</span>
+                                <span class="rsi-industry">Power Transmission</span>
+                                <span class="rsi-industry">Solar Energy</span>
+                                <span class="rsi-industry">Construction</span>
+                                <span class="rsi-industry">Wind Energy</span>
+                                <span class="rsi-industry">Steel Industry</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-5">
+                            <a href="about.html" class="rsi-btn">
+                                View Our Safety Solutions <i class='bx bx-chevron-right'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start Recent Work -->
+    <section class="safety-solutions py-5 position-relative overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="position-absolute top-0 start-0 w-100 h-100">
+            <div class="safety-bg-element bg-shield">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="safety-bg-element bg-harness">
+                <i class="fas fa-hard-hat"></i>
+            </div>
+            <div class="particle-overlay"></div>
+        </div>
+
+        <div class="container position-relative z-index-1">
+            <!-- Section Header with Interactive Elements -->
+            <div class="safety-header text-center mb-5">
+                <div class="badge bg-primary-gradient mb-3 animate__animated animate__fadeIn">TRUST OF SAFETY</div>
+                <h2 class="display-5 fw-bold mb-3">Advanced <span class="text-primary">Safety Solutions</span></h2>
+                <p class="lead mx-auto" style="max-width: 700px;">Engineered protection systems meeting global standards
+                    for fall prevention, arrest, and rescue operations</p>
+
+
+            </div>
+
+            <!-- Product Cards Grid -->
+            <div class="row gy-4" id="solution-grid">
+                <!-- Fall Protection Harnesses - Enhanced -->
+                <div class="col-lg-4 col-md-6" data-category="harness">
+                    <div class="solution-card h-100">
+                        <div class="card-img-container">
+                            <img src="assets/img/working_img/fall_protection.jpeg" alt="RSI Fall Protection Harness"
+                                class="img-fluid">
+                            <div class="hover-overlay">
+                                <button class="btn btn-primary quick-view-btn" data-bs-toggle="modal"
+                                    data-bs-target="#harnessModal">
+                                    <i class="fas fa-eye me-2"></i>Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <span class="cert-badge animate__animated animate__pulse animate__infinite">EN
+                                    361:2002</span>
+                                <button class="btn btn-sm btn-icon compare-btn" title="Add to compare">
+                                    <i class="fas fa-balance-scale"></i>
+                                </button>
+                            </div>
+                            <h3 class="mt-2">Fall Protection Harnesses</h3>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                                <span class="ms-2 small">4.7 (28 reviews)</span>
+                            </div>
+                            <p class="card-text">Premium NERO, ELITE & PRO Series with ergonomic design and
+                                high-strength forged D-rings.</p>
+
+                            <div class="solution-features mb-3">
+                                <span class="feature-badge">Adjustable Straps</span>
+                                <span class="feature-badge">Dorsal D-Ring</span>
+                                <span class="feature-badge">Comfort Padding</span>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="/pdf/myPdf.pdf" class="btn btn-sm btn-outline-primary">View Details</a>
+
+                                <div class="product-actions">
+                                    <button class="btn btn-sm btn-icon" title="Add to favorites">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-icon" title="Share">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Positioning Systems - Enhanced -->
+                <div class="col-lg-4 col-md-6" data-category="positioning">
+                    <div class="solution-card h-100">
+                        <div class="card-img-container">
+                            <img src="assets/img/working_img/belt.jpg" alt="RSI Work Positioning Belt"
+                                class="img-fluid">
+                            <div class="hover-overlay">
+                                <button class="btn btn-primary quick-view-btn" data-bs-toggle="modal"
+                                    data-bs-target="#harnessModal">
+                                    <i class="fas fa-eye me-2"></i>Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <span class="cert-badge">EN 358:1999</span>
+                                <span class="badge bg-success">BESTSELLER</span>
+                            </div>
+                            <h3 class="mt-2">Work Positioning Systems</h3>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <span class="ms-2 small">5.0 (42 reviews)</span>
+                            </div>
+                            <p class="card-text">Hands-free operation with lateral D-rings and premium padding for
+                                all-day comfort.</p>
+
+                            <div class="solution-features mb-3">
+                                <span class="feature-badge">Adjustable Belt</span>
+                                <span class="feature-badge">Lateral D-Rings</span>
+                                <span class="feature-badge">EN 358 Compliant</span>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="/pdf/myPdf.pdf" class="btn btn-sm btn-outline-primary">View Details</a>
+                                <div class="product-actions">
+                                    <button class="btn btn-sm btn-icon" title="Add to favorites">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-icon" title="Share">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lanyards & Connectors - Enhanced -->
+                <div class="col-lg-4 col-md-6" data-category="harness">
+                    <div class="solution-card h-100">
+                        <div class="card-img-container">
+                            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                                alt="Lanyards and Connectors" class="img-fluid">
+                            <div class="hover-overlay">
+                                <button class="btn btn-primary quick-view-btn" data-bs-toggle="modal"
+                                    data-bs-target="#harnessModal">
+                                    <i class="fas fa-eye me-2"></i>Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <span class="cert-badge">EN 355:2002</span>
+                                <span class="badge bg-danger">NEW</span>
+                            </div>
+                            <h3 class="mt-2">Lanyards & Connectors</h3>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="far fa-star text-warning"></i>
+                                <span class="ms-2 small">4.2 (15 reviews)</span>
+                            </div>
+                            <p class="card-text">Energy-absorbing designs with shock reduction technology for fall
+                                arrest situations.</p>
+
+                            <div class="solution-features mb-3">
+                                <span class="feature-badge">Energy Absorbing</span>
+                                <span class="feature-badge">Shock Reduction</span>
+                                <span class="feature-badge">High Strength</span>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="/pdf/myPdf.pdf" class="btn btn-sm btn-outline-primary">View Details</a>
+
+                                <div class="product-actions">
+                                    <button class="btn btn-sm btn-icon" title="Add to favorites">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-icon" title="Share">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Confined Space Equipment - Enhanced -->
+                <div class="col-lg-4 col-md-6" data-category="rescue">
+                    <div class="solution-card h-100">
+                        <div class="card-img-container">
+                            <img src="assets/img/working_img/space equip.jpeg" alt="Confined Space Equipment"
+                                class="img-fluid">
+                            <div class="hover-overlay">
+                                <button class="btn btn-primary quick-view-btn" data-bs-toggle="modal"
+                                    data-bs-target="#harnessModal">
+                                    <i class="fas fa-eye me-2"></i>Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <span class="cert-badge">EN 795:2012</span>
+                                <span class="badge bg-info">LIMITED STOCK</span>
+                            </div>
+                            <h3 class="mt-2">Confined Space Equipment</h3>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <span class="ms-2 small">5.0 (36 reviews)</span>
+                            </div>
+                            <p class="card-text">Aluminum tripod systems with 500kg capacity for safe confined space
+                                operations.</p>
+
+                            <div class="solution-features mb-3">
+                                <span class="feature-badge">Tripod Systems</span>
+                                <span class="feature-badge">Rescue Kits</span>
+                                <span class="feature-badge">500kg Capacity</span>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="/pdf/myPdf.pdf" class="btn btn-sm btn-outline-primary">View Details</a>
+
+                                <div class="product-actions">
+                                    <button class="btn btn-sm btn-icon" title="Add to favorites">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-icon" title="Share">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rope Access & Rescue - Enhanced -->
+                <div class="col-lg-4 col-md-6" data-category="rescue">
+                    <div class="solution-card h-100">
+                        <div class="card-img-container">
+                            <img src="assets/img/working_img/ropeAccess.jpeg" alt="Rope Access Equipment"
+                                class="img-fluid">
+                            <div class="hover-overlay">
+                                <button class="btn btn-primary quick-view-btn" data-bs-toggle="modal"
+                                    data-bs-target="#harnessModal">
+                                    <i class="fas fa-eye me-2"></i>Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <span class="cert-badge">EN 353 Certified</span>
+                                <span class="badge bg-warning text-dark">POPULAR</span>
+                            </div>
+                            <h3 class="mt-2">Rope Access & Rescue</h3>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                                <span class="ms-2 small">4.6 (31 reviews)</span>
+                            </div>
+                            <p class="card-text">Complete kits for professional rope access and emergency rescue
+                                operations.</p>
+
+                            <div class="solution-features mb-3">
+                                <span class="feature-badge">Rescue Kits</span>
+                                <span class="feature-badge">Material Handling</span>
+                                <span class="feature-badge">Complete System</span>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="/pdf/myPdf.pdf" class="btn btn-sm btn-outline-primary">View Details</a>
+
+                                <div class="product-actions">
+                                    <button class="btn btn-sm btn-icon" title="Add to favorites">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-icon" title="Share">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Safety Footwear - Enhanced -->
+                <div class="col-lg-4 col-md-6" data-category="ppe">
+                    <div class="solution-card h-100">
+                        <div class="card-img-container">
+                            <img src="assets/img/working_img/The steel toe cap is on the toe_ The midsole of the shoe is made of puncture-resistant Kevlar.jpeg"
+                                alt="Safety Footwear" class="img-fluid">
+                            <div class="hover-overlay">
+                                <button class="btn btn-primary quick-view-btn" data-bs-toggle="modal"
+                                    data-bs-target="#harnessModal">
+                                    <i class="fas fa-eye me-2"></i>Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <span class="cert-badge">EN ISO 20345</span>
+                                <span class="badge bg-success">FREE SHIPPING</span>
+                            </div>
+                            <h3 class="mt-2">Safety Footwear</h3>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="far fa-star text-warning"></i>
+                                <span class="ms-2 small">4.0 (22 reviews)</span>
+                            </div>
+                            <p class="card-text">Industrial-grade shoes with steel toe caps and oil-slip resistant
+                                soles.</p>
+
+                            <div class="solution-features mb-3">
+                                <span class="feature-badge">Steel Toe</span>
+                                <span class="feature-badge">Slip Resistant</span>
+                                <span class="feature-badge">Anti-Static</span>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="/pdf/myPdf.pdf" class="btn btn-sm btn-outline-primary">View Details</a>
+
+                                <div class="product-actions">
+                                    <button class="btn btn-sm btn-icon" title="Add to favorites">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-icon" title="Share">
+                                        <i class="fas fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="text-center mt-5 pt-4">
+                <h4 class="mb-4">Need Custom Safety Solutions?</h4>
+                <a href="contact.html" class="btn btn-primary btn-lg px-4 me-3">
+                    <i class="fas fa-headset me-2"></i>Contact Our Experts
+                </a>
+                <a href="#" class="btn btn-primary btn-lg px-4" id="downloadCatalog">
+                    <i class="fas fa-book me-2"></i>Download Catalog
+                </a>
+            </div>
+        </div>
+
+        <!-- Quick View Modal (Example for Harness) -->
+        <div class="modal fade" id="harnessModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Fall Protection Harness - RS-116</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="assets/img/working_img/fall_protection.jpeg" class="img-fluid rounded"
+                                    alt="Harness Detail">
+                                <div class="d-flex mt-3">
+                                    <img src="assets/img/working_img/harness-angle1.jpg" class="img-thumbnail me-2"
+                                        width="80">
+                                    <img src="assets/img/working_img/harness-angle2.jpg" class="img-thumbnail me-2"
+                                        width="80">
+                                    <img src="assets/img/working_img/harness-angle3.jpg" class="img-thumbnail"
+                                        width="80">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Key Features:</h6>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check-circle text-primary me-2"></i>Adjustable dorsal D-ring
+                                    </li>
+                                    <li><i class="fas fa-check-circle text-primary me-2"></i>Lateral D-rings for
+                                        positioning</li>
+                                    <li><i class="fas fa-check-circle text-primary me-2"></i>Comfort padded waist belt
+                                    </li>
+                                    <li><i class="fas fa-check-circle text-primary me-2"></i>44mm polyester webbing</li>
+                                    <li><i class="fas fa-check-circle text-primary me-2"></i>22kN breaking strength</li>
+                                </ul>
+                                <hr>
+                                <h6>Technical Specifications</h6>
+                                <div class="table-responsive">
+                                    <table class="table table-sm">
+                                        <tr>
+                                            <th>Material:</th>
+                                            <td>Polyester</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Weight:</th>
+                                            <td>1.65 kg</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Standards:</th>
+                                            <td>EN 361:2002, EN 358:1999</td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Recent Work -->
+
+    <!-- Start Footer -->
+    <footer class="bg-secondary pt-4">
+        <div class="container">
+            <div class="row py-4">
+                <!-- Company Info -->
+                <div class="col-lg-3 col-12 align-left">
+                    <a class="navbar-brand" href="index.html">
+                        <i class='bx bx-buildings bx-sm text-light'></i>
+                        <span class="text-light h5">RSI</span> <span class="text-light h5 semi-bold-600">SAFETY</span>
+                    </a>
+                    <p class="text-light my-lg-4 my-2">
+                        ISO 9001:2015 certified manufacturer of fall protection systems and PPE. Pioneers in height
+                        safety solutions, trusted globally for quality and innovation.
+                    </p>
+                    <ul class="list-inline footer-icons light-300">
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="http://facebook.com/">
+                                <i class='bx bxl-facebook-square bx-md'></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="https://www.linkedin.com/">
+                                <i class='bx bxl-linkedin-square bx-md'></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="https://www.whatsapp.com/">
+                                <i class='bx bxl-whatsapp-square bx-md'></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="mailto:rahmatsafetyindustries@gmail.com">
+                                <i class='bx bx-mail-send bx-md'></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+                    <h3 class="h4 pb-lg-3 text-light light-300">Our Company</h3>
+                    <ul class="list-unstyled text-light light-300">
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light"
+                                href="index.html">Home</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light"
+                                href="about.html">About Us</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light"
+                                href="products.html">Products</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light"
+                                href="certifications.html">Certifications</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light"
+                                href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Products -->
+                <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+                    <h3 class="h4 pb-lg-3 text-light light-300">Our Products</h3>
+                    <ul class="list-unstyled text-light light-300">
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light"
+                                href="#">Full Body Harnesses</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light"
+                                href="#">Lanyards & Connectors</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light"
+                                href="#">Fall Arrest Blocks</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light"
+                                href="#">Rescue & Rope Access</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light"
+                                href="#">Work Positioning Systems</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+                    <h3 class="h4 pb-lg-3 text-light light-300">Contact Us</h3>
+                    <ul class="list-unstyled text-light light-300">
+                        <li class="pb-2">
+                            <i class='bx-fw bx bx-map bx-xs'></i>
+                            <span class="text-light">S-5 Panki Industrial Area, Site-3, LML Chauraha, Kanpur (U.P.)
+                                208022</span>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bx-phone bx-xs'></i><a class="text-decoration-none text-light"
+                                href="tel:+917838552143">+91 7838552143</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bx-phone bx-xs'></i><a class="text-decoration-none text-light"
+                                href="tel:+917860739713">+91 7860739713</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bx-mail-send bx-xs'></i><a class="text-decoration-none text-light"
+                                href="mailto:rahmatsafetyindustries@gmail.com">rahmatsafetyindustries@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Load jQuery require for isotope -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Isotope -->
+    <script src="assets/js/isotope.pkgd.js"></script>
+    <!-- Page Script -->
+    <script>
+        $(window).load(function () {
+            // init Isotope
+            var $projects = $('.projects').isotope({
+                itemSelector: '.project',
+                layoutMode: 'fitRows'
+            });
+            $(".filter-btn").click(function () {
+                var data_filter = $(this).attr("data-filter");
+                $projects.isotope({
+                    filter: data_filter
+                });
+                $(".filter-btn").removeClass("active");
+                $(".filter-btn").removeClass("shadow");
+                $(this).addClass("active");
+                $(this).addClass("shadow");
+                return false;
+            });
+        });
+    </script>
+    <!-- Templatemo -->
+    <script src="assets/js/templatemo.js"></script>
+    <!-- Custom -->
+    <script src="assets/js/custom.js"></script>
+    <script>
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const serviceCards = document.querySelectorAll('.service-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active_services'));
+
+                    // Add active class to clicked button
+                    this.classList.add('active_services');
+
+                    const filterValue = this.getAttribute('data-filter');
+
+                    // Filter service cards
+                    serviceCards.forEach(card => {
+                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                            card.classList.remove('hide');
+                        } else {
+                            card.classList.add('hide');
+                        }
+                    });
+                });
+            });
+
+            // Add hover effect to service cards
+            serviceCards.forEach(card => {
+                card.addEventListener('mouseenter', function () {
+                    this.style.transform = 'translateY(-10px)';
+                });
+
+                card.addEventListener('mouseleave', function () {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+
+            // Add animation to header on load
+            const header = document.querySelector('.section-header');
+            setTimeout(() => {
+                header.style.opacity = '1';
+                header.style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+    <script>
+        // Simple scroll animation for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add active class to current page in navigation
+         currentPage = window.location.pathname.split('/').pop();
+         navLinks = document.querySelectorAll('nav ul li a');
+
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('main_nav');
+            if (window.scrollY > 100) { // Adjust this value based on when you want the navbar to appear
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Initialize navbar to appear if already scrolled on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbar = document.getElementById('main_nav');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            }
+        });
+
+        // Simple scroll animation for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add active class to current page in navigation
+        const currentPage = window.location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('nav ul li a');
+
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            }
+        });
+
+        // Filter functionality
+        document.querySelectorAll('.solution-filters .btn').forEach(button => {
+            button.addEventListener('click', function () {
+                // Remove active class from all buttons
+                document.querySelectorAll('.solution-filters .btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                const filter = this.getAttribute('data-filter');
+                const items = document.querySelectorAll('#solution-grid [data-category]');
+
+                items.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Quick view button functionality
+        document.querySelectorAll('.quick-view-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                // In a real implementation, you would load product-specific data here
+                console.log("Quick view for product clicked");
+            });
+        });
+    </script>
+    <script>
+        document.getElementById('downloadCatalog').addEventListener('click', function (e) {
+            e.preventDefault();
+            const link = document.createElement('a');
+            link.href = 'pdf/myPdf.pdf';
+            link.download = 'myPdf.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    </script>
+</body>
+
+</html>
