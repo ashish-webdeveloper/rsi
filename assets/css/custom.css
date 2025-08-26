@@ -1,0 +1,362 @@
+/*
+Custom CSS for TemplateMo 561 Purple Buzz
+
+https://templatemo.com/tm-561-purple-buzz
+
+*/
+
+
+ .rsi-view-work {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
+            color: white;
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .rsi-view-work::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+            z-index: 0;
+        }
+        
+        .rsi-icon-container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .rsi-icon {
+            background: rgba(255, 255, 255, 0.15);
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            backdrop-filter: blur(4px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .rsi-icon:hover {
+            transform: scale(1.1);
+            background: rgba(255, 255, 255, 0.25);
+        }
+        
+        .rsi-icon i {
+            font-size: 3.5rem;
+            color: white;
+        }
+        
+        .rsi-content {
+            position: relative;
+            z-index: 2;
+            padding: 0 1rem;
+        }
+        
+        .rsi-stats-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .rsi-stat {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            min-width: 150px;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        .rsi-stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #ffcc00;
+        }
+        
+        .rsi-stat-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .rsi-cert-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            margin: 0.5rem;
+            font-size: 0.85rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .rsi-btn {
+            background: #ffcc00;
+            color: var(--rsi-dark);
+            border: none;
+            font-weight: 600;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .rsi-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            background: #ffd740;
+        }
+        
+        .rsi-btn:active {
+            transform: translateY(1px);
+        }
+        
+        .rsi-btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+        }
+        
+        .rsi-btn:hover::before {
+            transform: translateX(100%);
+        }
+        
+        .rsi-industries {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+        }
+        
+        .rsi-industry {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+        
+        @media (max-width: 768px) {
+            .rsi-stats-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .rsi-stat {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+
+ .safety-solutions {
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .safety-header {
+            position: relative;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .safety-header h2 {
+            font-weight: 700;
+            color: #1a2a6c;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .safety-header h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--rsi-safety-yellow), var(--rsi-safety-orange));
+            border-radius: 2px;
+        }
+        
+        .safety-header p {
+            color: #495057;
+            max-width: 700px;
+            margin: 1rem auto 0;
+            font-size: 1.1rem;
+        }
+        
+        .solution-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            height: 100%;
+            background: white;
+            position: relative;
+        }
+        
+        .solution-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .solution-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #1a2a6c, #b21f1f, #1a2a6c);
+            z-index: 2;
+        }
+        
+        .card-img-container {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .card-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .solution-card:hover .card-img-container img {
+            transform: scale(1.05);
+        }
+        
+        .solution-card .card-body {
+            padding: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .solution-card h3 {
+            font-weight: 700;
+            color: #1a2a6c;
+            margin-bottom: 0.8rem;
+            font-size: 1.4rem;
+        }
+        
+        .solution-card p {
+            color: #495057;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .solution-card .cert-badge {
+            display: inline-block;
+            background: rgba(26, 42, 108, 0.1);
+            color: #1a2a6c;
+            padding: 0.25rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .solution-card .btn-view {
+            display: inline-flex;
+            align-items: center;
+            background: transparent;
+            color: #1a2a6c;
+            border: 2px solid #1a2a6c;
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .solution-card .btn-view i {
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .solution-card .btn-view:hover {
+            background: #1a2a6c;
+            color: white;
+        }
+        
+        .solution-card .btn-view:hover i {
+            transform: translateX(3px);
+        }
+        
+        .safety-bg-element {
+            position: absolute;
+            opacity: 0.03;
+            z-index: 0;
+        }
+        
+        .bg-shield {
+            top: 10%;
+            left: 5%;
+            font-size: 15rem;
+            color: #1a2a6c;
+        }
+        
+        .bg-harness {
+            bottom: 10%;
+            right: 5%;
+            font-size: 12rem;
+            color: #1a2a6c;
+        }
+        
+        .solution-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .feature-badge {
+            background: rgba(255, 204, 0, 0.15);
+            color: #856404;
+            padding: 0.25rem 0.7rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .card-img-container {
+                height: 180px;
+            }
+            
+            .safety-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .bg-shield, .bg-harness {
+                display: none;
+            }
+        }

@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Rahmat Safety Industries</title>
+    <!-- Load Require CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Load Tempalte CSS -->
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <style>
+        .product-section {
+            margin-bottom: 60px;
+        }
+
+        .product-image-full {
+            margin-bottom: 20px;
+        }
+
+        .product-image-full img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+        }
+
+        .product-content-full {
+            padding: 0 15px;
+        }
+
+        :root {
+            --primary: #1a3a6c;
+            --secondary: #e74c3c;
+            --accent: #f39c12;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: #fff;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary);
+        }
+
+        .nav-btn {
+            background-color: var(--secondary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .nav-btn:hover {
+            background-color: #c0392b;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 58, 108, 0.85), rgba(26, 58, 108, 0.9)), url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: white;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary);
+            color: white;
+            border: 2px solid var(--secondary);
+        }
+
+        .btn-primary:hover {
+            background-color: #c0392b;
+            border-color: #c0392b;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 4px;
+            background-color: var(--secondary);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-header p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 20px auto 0;
+        }
+
+        /* About Section */
+        .about-content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .about-highlights {
+            margin-top: 30px;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .highlight-icon {
+            background-color: var(--secondary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .highlight-text h4 {
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        #main_nav {
+            transition: all 0.3s ease;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        #main_nav.scrolled {
+            transform: translateY(0);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo_img {
+            width: 4.5rem;
+            height: 4.5rem;
+        }
+
+        #main_nav.scrolled {
+            transform: translateY(0);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand span {
+            display: inline-block;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Mission Section */
+        .mission {
+            background-color: var(--light);
+        }
+
+        .mission-cards {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .mission-card {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .mission-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .mission-icon {
+            background-color: rgba(26, 58, 108, 0.1);
+            color: var(--primary);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 30px;
+        }
+
+        .mission-card h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        /* Certifications */
+        .certifications {
+            background: linear-gradient(rgba(26, 58, 108, 0.9), rgba(26, 58, 108, 0.9)), url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .certifications .section-header h2 {
+            color: white;
+        }
+
+        .certifications .section-header h2:after {
+            background-color: var(--secondary);
+        }
+
+        .certifications .section-header p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .cert-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .cert-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .cert-card h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        /* Products */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image {
+            height: 200px;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray);
+            font-size: 40px;
+        }
+
+        .product-content {
+            padding: 20px;
+        }
+
+        .product-content h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .product-specs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .spec-item {
+            background-color: rgba(26, 58, 108, 0.08);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: var(--primary);
+        }
+
+        /* Leadership */
+        .leadership {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 320px;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-position {
+            color: #4a6fa5;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .team-image i {
+            font-size: 3rem;
+        }
+
+        .team-info {
+            padding: 20px;
+        }
+
+        .team-info h3 {
+            margin-bottom: 5px;
+        }
+
+        .team-position {
+            color: var(--secondary);
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .contact-icon {
+            background-color: rgba(26, 58, 108, 0.1);
+            color: var(--primary);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .contact-text h4 {
+            margin-bottom: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background-color: var(--secondary);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary);
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 5px 10px;
+            }
+
+            .hero {
+                padding: 70px 0;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+     <!-- Header -->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+        <!-- Brand Logo with Animation -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html" style="transition: all 0.3s ease;">
+            <img src="assets/img/working_img/logo.png" class="img-fluid logo-img me-2" style="height: 40px;" alt="Logo">
+            <div>
+                <span class="text-dark fw-bold fs-4">RSI</span> 
+                <span class="text-gradient-primary fw-bold fs-4">Trust of Safety</span>
+            </div>
+        </a>
+
+        <!-- Mobile Toggle Button -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Content -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item mx-2">
+                    <a class="nav-link position-relative" href="index.html">
+                        <span>Home</span>
+                        <div class="nav-hover-indicator"></div>
+                    </a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link position-relative" href="about.html">
+                        <span>About</span>
+                        <div class="nav-hover-indicator"></div>
+                    </a>
+                </li>
+                
+                <!-- Products Dropdown -->
+                <li class="nav-item dropdown mx-2">
+                    <a class="nav-link dropdown-toggle position-relative" href="products.html" id="productsDropdown" 
+                       role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span>Products</span>
+                        <div class="nav-hover-indicator"></div>
+                    </a>
+                    <ul class="dropdown-menu shadow-lg border-0 rounded-3 p-2" aria-labelledby="productsDropdown">
+                        <li>
+                            <a class="dropdown-item rounded-3 p-3 d-flex align-items-center" href="harness.html">
+                                <i class='bx bx-shield-quarter me-2 fs-5 text-primary'></i>
+                                <div>
+                                    <h6 class="mb-0">Harness & Belt</h6>
+                                    <small class="text-muted">Full body harnesses, work positioning belts, and safety straps</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider my-2"></li>
+                        <li>
+                            <a class="dropdown-item rounded-3 p-3 d-flex align-items-center" href="lanyard.html">
+                                <i class='bx bx-first-aid me-2 fs-5 text-primary'></i>
+                                <div>
+                                    <h6 class="mb-0">Lanyards</h6>
+                                    <small class="text-muted">Energy absorbing, fall arrest, and restraint lanyards</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider my-2"></li>
+                        <li>
+                            <a class="dropdown-item rounded-3 p-3 d-flex align-items-center" href="hooks.html">
+                                <i class='bx bx-analyse me-2 fs-5 text-primary'></i>
+                                <div>
+                                    <h6 class="mb-0">Hooks & Connectors</h6>
+                                    <small class="text-muted">Carabiners, snap hooks, and connecting components</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider my-2"></li>
+                        <li>
+                            <a class="dropdown-item rounded-3 p-3 d-flex align-items-center" href="rope.html">
+                                <i class='bx bx-certification me-2 fs-5 text-primary'></i>
+                                <div>
+                                    <h6 class="mb-0">Rope Access & Rescue</h6>
+                                    <small class="text-muted">Descenders, ascenders, and rescue equipment</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider my-2"></li>
+                        <li>
+                            <a class="dropdown-item rounded-3 p-3 d-flex align-items-center" href="headProtection.html">
+                                <i class='bx bx-cctv me-2 fs-5 text-primary'></i>
+                                <div>
+                                    <h6 class="mb-0">Head Protection</h6>
+                                    <small class="text-muted">Safety helmets, caps, and accessories</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider my-2"></li>
+                        <li>
+                            <a class="dropdown-item rounded-3 p-3 d-flex align-items-center" href="fallArrest.html">
+                                <i class='bx bx-anchor me-2 fs-5 text-primary'></i>
+                                <div>
+                                    <h6 class="mb-0">Fall Arrest Systems</h6>
+                                    <small class="text-muted">Blocks, winches, and complete fall protection systems</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider my-2"></li>
+                        <li>
+                            <a class="dropdown-item rounded-3 p-3 d-flex align-items-center" href="anchorage.html">
+                                <i class='bx bx-building me-2 fs-5 text-primary'></i>
+                                <div>
+                                    <h6 class="mb-0">Anchorage Points</h6>
+                                    <small class="text-muted">Fixed and temporary anchor devices</small>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item mx-2">
+                    <a class="nav-link position-relative" href="work.html">
+                        <span>Certificates</span>
+                        <div class="nav-hover-indicator"></div>
+                    </a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link position-relative" href="contact.html">
+                        <span>Contact</span>
+                        <div class="nav-hover-indicator"></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+    <!-- Close Header -->
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container mt-5">
+            <div class="hero-content">
+                <h1>TRUST OF SAFETY</h1>
+                <p>ISO 9001:2015 certified company dedicated to the field of Safety. We stand as a trusted and renowned
+                    brand in fall protection globally.</p>
+                <div class="hero-btns">
+                    <a href="#products" class="btn btn-primary">Explore Our Products</a>
+                    <a href="#contact" class="btn btn-outline">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="text-light">About Rahmat Safety Industries</h2>
+                <p class="text-light">Pioneers in manufacturing safety materials with a focus on height safety and fall protection
+                    solutions</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Commitment to Safety Excellence</h3>
+                    <p>Rahmat Safety Industries (RSI) takes immense pride in being an ISO 9001:2015 certified company
+                        dedicated to the field of Safety. RSI stands as a trusted and renowned brand in the industry,
+                        recognized as one of the fastest-growing companies globally in Fall Protection Products and
+                        Systems.</p>
+                    <p>Quality is at the heart of everything we do. Every safety product manufactured at RSI undergoes
+                        rigorous quality checks at multiple stages of production. Our team of highly experienced
+                        professionals maintains vigilant oversight to ensure each piece meets stringent global quality
+                        standards.</p>
+
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>Global Reach</h4>
+                                <p>Our products are in high demand in the UK, Mexico, Middle East, Japan, Brazil, Hong
+                                    Kong, Turkey, Poland, Spain, and more.</p>
+                            </div>
+                        </div>
+
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>State-of-the-Art Facility</h4>
+                                <p>Our in-house production facility boasts cutting-edge machinery enabling us to produce
+                                    top-quality products consistently.</p>
+                            </div>
+                        </div>
+
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>Innovation Focus</h4>
+                                <p>We're committed to innovation with products like Retractable Fall Arrest Blocks and
+                                    Fixed Line Systems aimed at providing the best in safety.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div
+                        style="background-color: #e0e6ed; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #4a6fa5; font-size: 16px; padding: 20px; text-align: center;">
+                        <img src="assets/img/working_img/logo.png" alt="RSI Logo" class="img-fluid mb-3"
+                            style="width: 200px; height: 200px;">
+                        <p>RSI Manufacturing Facility</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Mission Section -->
+    <section class="mission">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="text-light">Our Mission & Vision</h2>
+                <p class="text-light">Committed to creating a safer world for workers at height</p>
+            </div>
+
+            <div class="mission-cards">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To become a global leader in our line of business backed by state-of-the-art technology and
+                        quality products leveraging on our human resources.</p>
+                </div>
+
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To create a safer world starting within our organization, where our staff is equipped and trained
+                        to handle safety equipment effectively.</p>
+                </div>
+
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <h3>Our Goal</h3>
+                    <p>Achieve a Zero Accident & Injury Free World through constant innovation and dedication to safety
+                        excellence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Certifications -->
+    <section class="certifications">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Certifications & Standards</h2>
+                <p>Adhering to the highest international safety standards</p>
+            </div>
+
+            <div class="certs-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>ISO 9001:2015</h3>
+                    <p>Quality Management Systems Certification</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>EN Standards</h3>
+                    <p>Certified under EN standards by UK Cert Limited UK (4085)</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>IS 3521:1999</h3>
+                    <p>Compliance with Indian industrial safety standards</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>ANSI Standards</h3>
+                    <p>Capability to manufacture products as per ANSI product line</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Products -->
+    <section id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="text-light">Our Safety Products</h2>
+                <p class="text-light">Comprehensive solutions for all safety-related needs</p>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img style="height: 13rem;" src="assets/img/working_img/full_body_harness.jpeg"
+                            alt="Full Body Harness">
+                    </div>
+                    <div class="product-content">
+                        <h3>Full Body Harnesses</h3>
+                        <p>RSI NERO, ELITE, PRO and MAX series designed for maximum safety and comfort at height.</p>
+                        <div class="product-specs">
+                            <span class="spec-item">EN 361:2002</span>
+                            <span class="spec-item">Adjustable</span>
+                            <span class="spec-item">22 kN Strength</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img style="height: 13rem;" src="assets/img/working_img/lanyard.jpeg"
+                            alt="Lanyards and Connectors">
+                    </div>
+                    <div class="product-content">
+                        <h3>Lanyards & Connectors</h3>
+                        <p>Energy absorbing lanyards, fork lanyards, and connectors for secure fall protection systems.
+                        </p>
+                        <div class="product-specs">
+                            <span class="spec-item">EN 355:2002</span>
+                            <span class="spec-item">EN 354:2010</span>
+                            <span class="spec-item">Multiple Sizes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img style="height: 13rem;" src="assets/img/working_img/fall_arrest.jpeg"
+                            alt="Retractable Fall Arrester">
+                    </div>
+                    <div class="product-content">
+                        <h3>Retractable Fall Arresters</h3>
+                        <p>Self-retracting lifelines for enhanced fall protection with minimal clearance requirements.
+                        </p>
+                        <div class="product-specs">
+                            <span class="spec-item">EN 360:2002</span>
+                            <span class="spec-item">2.0m Clearance</span>
+                            <span class="spec-item">High Durability</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img style="height: 13rem;" src="assets/img/working_img/tro.jpeg"
+                            alt="Tripod and Confined Space Equipment">
+                    </div>
+                    <div class="product-content">
+                        <h3>Tripods & Confined Space</h3>
+                        <p>RSH-TP800 tripod designed for confined space entry/retrieval applications.</p>
+                        <div class="product-specs">
+                            <span class="spec-item">EN 795:2012</span>
+                            <span class="spec-item">500 kg Capacity</span>
+                            <span class="spec-item">Aluminum Alloy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Leadership -->
+    <section class="leadership">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="text-light">Our Leadership</h2>
+                <p class="text-light">Guided by experienced professionals committed to safety</p>
+            </div>
+
+            <div class="team-grid d-flex justify-content-center align-items-center flex-wrap">
+                <div class="team-member text-center mx-3 my-3">
+                    <div class="team-image mb-3">
+                        <i class="fas fa-user-tie display-1" style="color: #4a6fa5;"></i>
+                    </div>
+                    <div class="team-info">
+                        <h3>Mr. Noor Alam</h3>
+                        <div class="team-position">Director</div>
+                        <p>With decades of experience in safety equipment manufacturing, Mr. Alam leads RSI with a
+                            vision for global safety excellence.</p>
+                    </div>
+                </div>
+
+                <div class="team-member text-center mx-3 my-3">
+                    <div class="team-image mb-3">
+                        <i class="fas fa-user-cog display-1" style="color: #4a6fa5;"></i>
+                    </div>
+                    <div class="team-info">
+                        <h3>Engineering Team</h3>
+                        <div class="team-position">R&D Department</div>
+                        <p>Our dedicated engineering team works tirelessly to develop innovative safety solutions that
+                            exceed industry standards.</p>
+                    </div>
+                </div>
+
+                <div class="team-member text-center mx-3 my-3">
+                    <div class="team-image mb-3">
+                        <i class="fas fa-user-check display-1" style="color: #4a6fa5;"></i>
+                    </div>
+                    <div class="team-info">
+                        <h3>Quality Assurance</h3>
+                        <div class="team-position">QA Department</div>
+                        <p>Ensuring every product meets our rigorous quality standards before reaching our customers
+                            worldwide.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="text-light">Contact Us</h2>
+                <p class="text-light">Reach out to our team for any safety-related queries or product information</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Office</h4>
+                            <p>212-A Machhariya, Naubasta, Kanpur Nagar - 208021</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Factory</h4>
+                            <p>S-5 Panki, Industrial Area, Site-3, LML Chauraha, Kanpur (U.P.) 208 022</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Phone</h4>
+                            <p>+91 7838552143, +91 7860739713</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p>rahmatsafetyindustries@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <div
+                        style="background-color: #f8f9fa; padding: 30px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);">
+                        <h3 style="margin-bottom: 20px; color: var(--primary);">Send us a message</h3>
+                        <form>
+                            <div style="margin-bottom: 20px;">
+                                <input type="text" placeholder="Your Name"
+                                    style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px;">
+                            </div>
+                            <div style="margin-bottom: 20px;">
+                                <input type="email" placeholder="Your Email"
+                                    style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px;">
+                            </div>
+                            <div style="margin-bottom: 20px;">
+                                <input type="text" placeholder="Subject"
+                                    style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px;">
+                            </div>
+                            <div style="margin-bottom: 20px;">
+                                <textarea placeholder="Your Message"
+                                    style="width: 100%; height: 120px; padding: 12px; border: 1px solid #ddd; border-radius: 4px;"></textarea>
+                            </div>
+                            <button type="submit"
+                                style="background-color: var(--secondary); color: white; border: none; padding: 12px 30px; border-radius: 4px; font-weight: 500; cursor: pointer;">Send
+                                Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start Footer -->
+    <footer class="footer-20252">
+      <div class="site-section">
+        <div class="container">
+
+          <div class="cta d-block d-md-flex align-items-center px-5">
+            <div>
+              <h2 class="mb-0">RSI - Rahmat Safety </h2>
+              <h3 class="text-dark">Let's get started!</h3>
+            </div>
+            
+          </div>
+          <div class="row">
+
+            <div class="col-sm">
+              <a href="#" class="footer-logo">RSI - Rahmat Safety</a>
+              <p class="copyright">
+                <small>&copy; 2025</small>
+              </p>
+            </div>
+            <div class="col-sm">
+              <h3>Customers</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#">Buyer</a></li>
+                <li><a href="#">Supplier</a></li>
+              </ul>
+            </div>
+            <div class="col-sm">
+              <h3>Company</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact us</a></li>
+              </ul>
+            </div>
+            <div class="col-sm">
+              <h3>Further Information</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#">Terms &amp; Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Follow us</h3>
+               <ul class="list-unstyled social">
+                  <li><a href="#"><span class="icon-facebook"><i class="fab fa-facebook-f"></i></span></a></li>
+                <li><a href="#"><span class="icon-twitter"><i class="fab fa-twitter"></i></span></a></li>
+                <li><a href="#"><span class="icon-instagram"><i class="fab fa-instagram"></i></span></a></li>
+               
+                <li><a href="#"><span class="icon-linkedin"><i class="fab fa-linkedin-in"></i></span></a></li>
+                <li><a href="#"><span class="icon-pinterest"><i class="fab fa-pinterest-p"></i></span></a></li>
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+
+    <!-- End Footer -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Load jQuery require for isotope -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Isotope -->
+    <script src="assets/js/isotope.pkgd.js"></script>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('main_nav');
+            if (window.scrollY > 100) { // Adjust this value based on when you want the navbar to appear
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Initialize navbar to appear if already scrolled on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbar = document.getElementById('main_nav');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            }
+        });
+
+        // Simple scroll animation for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add active class to current page in navigation
+        const currentPage = window.location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('nav ul li a');
+
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+
+</html>

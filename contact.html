@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Contact Us - Rahmat Safety Industries</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- Load Require CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Load Tempalte CSS -->
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <!-- Custom CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+        /* Navbar styles */
+        #main_nav {
+            transition: all 0.3s ease;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        #main_nav.scrolled {
+            transform: translateY(0);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Adjust the banner section to account for fixed navbar */
+        .bg-light {
+            padding-top: 50px;
+        }
+
+        .logo_img {
+            width: 4.5rem;
+            height: 4.5rem;
+        }
+    </style>
+</head>
+
+<body>
+      <!-- Header -->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+        <!-- Brand Logo with Animation -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html" style="transition: all 0.3s ease;">
+            <img src="assets/img/working_img/logo.png" class="img-fluid logo-img me-2" style="height: 40px;" alt="Logo">
+            <div>
+                <span class="text-dark fw-bold fs-4">RSI</span> 
+                <span class="text-gradient-primary fw-bold fs-4">Trust of Safety</span>
+            </div>
+        </a>
+
+        <!-- Mobile Toggle Button -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Content -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item mx-2">
+                    <a class="nav-link position-relative" href="index.html">
+                        <span>Home</span>
+                        <div class="nav-hover-indicator"></div>
+                    </a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link position-relative" href="about.html">
+                        <span>About</span>
+                        <div class="nav-hover-indicator"></div>
+                    </a>
+                </li>
+                
+                <!-- Products Dropdown -->
+                <li class="nav-item dropdown mx-2">
+                    <a class="nav-link dropdown-toggle position-relative" href="products.html" id="productsDropdown" 
+                       role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span>Products</span>
+                        <div class="nav-hover-indicator"></div>
+                    </a>
+                    <ul class="dropdown-menu shadow-lg border-0 rounded-3 p-2" aria-labelledby="productsDropdown">
+                        <li>
+                            <a class="dropdown-item rounded-3 p-3 d-flex align-items-center" href="harness.html">
+                                <i class='bx bx-shield-quarter me-2 fs-5 text-primary'></i>
+                                <div>
+                                    <h6 class="mb-0">Harness & Belt</h6>
+                                    <small class="text-muted">Full body harnesses, work positioning belts, and safety straps</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider my-2"></li>
+                        <li>
+                            <a class="dropdown-item rounded-3 p-3 d-flex align-items-center" href="lanyard.html">
+                                <i class='bx bx-first-aid me-2 fs-5 text-primary'></i>
+                                <div>
+                                    <h6 class="mb-0">Lanyards</h6>
+                                    <small class="text-muted">Energy absorbing, fall arrest, and restraint lanyards</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider my-2"></li>
+                        <li>
+                            <a class="dropdown-item rounded-3 p-3 d-flex align-items-center" href="hooks.html">
+                                <i class='bx bx-analyse me-2 fs-5 text-primary'></i>
+                                <div>
+                                    <h6 class="mb-0">Hooks & Connectors</h6>
+                                    <small class="text-muted">Carabiners, snap hooks, and connecting components</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider my-2"></li>
+                        <li>
+                            <a class="dropdown-item rounded-3 p-3 d-flex align-items-center" href="rope.html">
+                                <i class='bx bx-certification me-2 fs-5 text-primary'></i>
+                                <div>
+                                    <h6 class="mb-0">Rope Access & Rescue</h6>
+                                    <small class="text-muted">Descenders, ascenders, and rescue equipment</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider my-2"></li>
+                        <li>
+                            <a class="dropdown-item rounded-3 p-3 d-flex align-items-center" href="headProtection.html">
+                                <i class='bx bx-cctv me-2 fs-5 text-primary'></i>
+                                <div>
+                                    <h6 class="mb-0">Head Protection</h6>
+                                    <small class="text-muted">Safety helmets, caps, and accessories</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider my-2"></li>
+                        <li>
+                            <a class="dropdown-item rounded-3 p-3 d-flex align-items-center" href="fallArrest.html">
+                                <i class='bx bx-anchor me-2 fs-5 text-primary'></i>
+                                <div>
+                                    <h6 class="mb-0">Fall Arrest Systems</h6>
+                                    <small class="text-muted">Blocks, winches, and complete fall protection systems</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider my-2"></li>
+                        <li>
+                            <a class="dropdown-item rounded-3 p-3 d-flex align-items-center" href="anchorage.html">
+                                <i class='bx bx-building me-2 fs-5 text-primary'></i>
+                                <div>
+                                    <h6 class="mb-0">Anchorage Points</h6>
+                                    <small class="text-muted">Fixed and temporary anchor devices</small>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item mx-2">
+                    <a class="nav-link position-relative" href="work.html">
+                        <span>Certificates</span>
+                        <div class="nav-hover-indicator"></div>
+                    </a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link position-relative" href="contact.html">
+                        <span>Contact</span>
+                        <div class="nav-hover-indicator"></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+    <!-- Close Header -->
+
+    <!-- Start Banner Hero -->
+    <section class="bg-light mt-3">
+        <div class="container py-4">
+            <div class="row align-items-center justify-content-between">
+                <div class="contact-header col-lg-4">
+                    <h1 class="h2 pb-3 text-primary">Contact Us</h1>
+                    <h3 class="h4 regular-400">Trust of Safety</h3>
+                    <p class="light-300">
+                        ISO 9001:2015 certified company specializing in fall protection products and height safety
+                        equipment.
+                    </p>
+                </div>
+                <div class="contact-img col-lg-5 align-items-end col-md-4">
+                    <img src="./assets/img/banner-img-01.svg">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Banner Hero -->
+
+    <!-- Start Contact -->
+    <section class="container py-5">
+        <h1 class="col-12 col-xl-8 h2 text-left text-primary pt-3">Get in touch with our safety experts</h1>
+        <h2 class="col-12 col-xl-8 h4 text-left regular-400">We're here to help with all your fall protection needs</h2>
+        <p class="col-12 col-xl-8 text-left text-muted pb-5 light-300">
+            Rahmat Safety Industries is a leading manufacturer of personal protective equipment with a global presence.
+            Contact us for inquiries about our products, certifications, or to discuss your specific safety
+            requirements.
+        </p>
+
+        <div class="row pb-4">
+            <div class="col-lg-4">
+                <div class="contact row mb-4">
+                    <div class="contact-icon col-lg-3 col-3">
+                        <div class="py-3 mb-2 text-center border rounded text-secondary">
+                            <i class='display-6 bx bx-map'></i>
+                        </div>
+                    </div>
+                    <ul class="contact-info list-unstyled col-lg-9 col-9 light-300">
+                        <li class="h5 mb-0">Office Address</li>
+                        <li class="text-muted">212-A Machhariya, Naubasta</li>
+                        <li class="text-muted">Kanpur Nagar - 208021, India</li>
+                    </ul>
+                </div>
+
+                <div class="contact row mb-4">
+                    <div class="contact-icon col-lg-3 col-3">
+                        <div class="border py-3 mb-2 text-center border rounded text-secondary">
+                            <i class="bi bi-buildings display-6"></i>
+                        </div>
+                    </div>
+                    <ul class="contact-info list-unstyled col-lg-9 col-9 light-300">
+                        <li class="h5 mb-0">Factory Address</li>
+                        <li class="text-muted">S-5 Panki, Industrial Area, Site-3</li>
+                        <li class="text-muted">LML Chauraha, Kanpur (U.P.) 208 022</li>
+                    </ul>
+                </div>
+
+                <div class="contact row mb-4">
+                    <div class="contact-icon col-lg-3 col-3">
+                        <div class="border py-3 mb-2 text-center border rounded text-secondary">
+                            <i class='bx bx-phone display-6'></i>
+                        </div>
+                    </div>
+                    <ul class="contact-info list-unstyled col-lg-9 col-9 light-300">
+                        <li class="h5 mb-0">Contact Numbers</li>
+                        <li class="text-muted">+91 7838552143</li>
+                        <li class="text-muted">+91 7860739713</li>
+                    </ul>
+                </div>
+
+                <div class="contact row mb-4">
+                    <div class="contact-icon col-lg-3 col-3">
+                        <div class="border py-3 mb-2 text-center border rounded text-secondary">
+                            <i class='bx bx-envelope display-6'></i>
+                        </div>
+                    </div>
+                    <ul class="contact-info list-unstyled col-lg-9 col-9 light-300">
+                        <li class="h5 mb-0">Email Address</li>
+                        <li class="text-muted">rahmatsafetyindustries@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Start Contact Form -->
+            <div class="col-lg-8">
+                <form class="contact-form row" method="post" action="#" role="form">
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control form-control-lg light-300" id="floatingname"
+                                name="inputname" placeholder="Name">
+                            <label for="floatingname light-300">Name</label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control form-control-lg light-300" id="floatingemail"
+                                name="inputemail" placeholder="Email">
+                            <label for="floatingemail light-300">Email</label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control form-control-lg light-300" id="floatingphone"
+                                name="inputphone" placeholder="Phone">
+                            <label for="floatingphone light-300">Phone</label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control form-control-lg light-300" id="floatingcompany"
+                                name="inputcompany" placeholder="Company Name">
+                            <label for="floatingcompany light-300">Company Name</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control form-control-lg light-300" id="floatingsubject"
+                                name="inputsubject" placeholder="Subject">
+                            <label for="floatingsubject light-300">Subject</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control light-300" rows="8" placeholder="Message"
+                                id="floatingtextarea"></textarea>
+                            <label for="floatingtextarea light-300">Message</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-12 m-auto text-end">
+                        <button type="submit"
+                            class="btn btn-secondary rounded-pill px-md-5 px-4 py-2 radius-0 text-light light-300">Send
+                            Message</button>
+                    </div>
+                </form>
+            </div>
+            <!-- End Contact Form -->
+        </div>
+    </section>
+    <!-- End Contact -->
+
+    <!-- Start Map -->
+    <section class="container-fluid px-0">
+        <div class="row">
+            <div class="col-12">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3570.284134676345!2d80.27015831503282!3d26.50436308329822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDMwJzE1LjciTiA4MMKwMTYnMTkuOCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+    <!-- End Map -->
+
+     <!-- Start Footer -->
+    <footer class="footer-20252">
+      <div class="site-section">
+        <div class="container">
+
+          <div class="cta d-block d-md-flex align-items-center px-5">
+            <div>
+              <h2 class="mb-0">RSI - Rahmat Safety </h2>
+              <h3 class="text-dark">Let's get started!</h3>
+            </div>
+            
+          </div>
+          <div class="row">
+
+            <div class="col-sm">
+              <a href="#" class="footer-logo">RSI - Rahmat Safety</a>
+              <p class="copyright">
+                <small>&copy; 2025</small>
+              </p>
+            </div>
+            <div class="col-sm">
+              <h3>Customers</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#">Buyer</a></li>
+                <li><a href="#">Supplier</a></li>
+              </ul>
+            </div>
+            <div class="col-sm">
+              <h3>Company</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact us</a></li>
+              </ul>
+            </div>
+            <div class="col-sm">
+              <h3>Further Information</h3>
+              <ul class="list-unstyled links">
+                <li><a href="#">Terms &amp; Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Follow us</h3>
+               <ul class="list-unstyled social">
+                  <li><a href="#"><span class="icon-facebook"><i class="fab fa-facebook-f"></i></span></a></li>
+                <li><a href="#"><span class="icon-twitter"><i class="fab fa-twitter"></i></span></a></li>
+                <li><a href="#"><span class="icon-instagram"><i class="fab fa-instagram"></i></span></a></li>
+               
+                <li><a href="#"><span class="icon-linkedin"><i class="fab fa-linkedin-in"></i></span></a></li>
+                <li><a href="#"><span class="icon-pinterest"><i class="fab fa-pinterest-p"></i></span></a></li>
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Templatemo -->
+    <script src="assets/js/templatemo.js"></script>
+    <!-- Custom -->
+    <script src="assets/js/custom.js"></script>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('main_nav');
+            if (window.scrollY > 100) { // Adjust this value based on when you want the navbar to appear
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Initialize navbar to appear if already scrolled on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbar = document.getElementById('main_nav');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            }
+        });
+
+        // Simple scroll animation for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add active class to current page in navigation
+        const currentPage = window.location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('nav ul li a');
+
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+
+</html>
